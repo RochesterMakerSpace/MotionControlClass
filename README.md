@@ -1,2 +1,1 @@
-# MotorControlClass
-All files related to the Introduction to Motor Control class at Rochester MakerSpace
+﻿# MotorControlClassAll files related to the Introduction to Motion Control class at Rochester MakerSpace
