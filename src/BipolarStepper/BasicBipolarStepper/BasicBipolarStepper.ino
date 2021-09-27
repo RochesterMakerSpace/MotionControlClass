@@ -6,6 +6,8 @@
 #define stepsPerRevolution 200
 
 void setup() {
+  // Begin Serial communication at a baud rate of 9600:
+  Serial.begin(9600);
   // Declare pins as output:
   pinMode(stepPin, OUTPUT);
   pinMode(dirPin, OUTPUT);
@@ -15,6 +17,7 @@ void loop() {
   // Set the spinning direction clockwise:
   digitalWrite(dirPin, HIGH);
 
+  Serial.println("1 revolution slowly, clockwise");
   // Spin the stepper motor 1 revolution slowly:
   for (int i = 0; i < stepsPerRevolution; i++) {
     // These four lines result in 1 step:
@@ -29,6 +32,7 @@ void loop() {
   // Set the spinning direction counterclockwise:
   digitalWrite(dirPin, LOW);
 
+  Serial.println("1 revolution quickly, counterclockwise");
   // Spin the stepper motor 1 revolution quickly:
   for (int i = 0; i < stepsPerRevolution; i++) {
     // These four lines result in 1 step:
@@ -43,6 +47,7 @@ void loop() {
   // Set the spinning direction clockwise:
   digitalWrite(dirPin, HIGH);
 
+  Serial.println("5 revolutions fast, clockwise");
   // Spin the stepper motor 5 revolutions fast:
   for (int i = 0; i < 5 * stepsPerRevolution; i++) {
     // These four lines result in 1 step:
@@ -57,6 +62,7 @@ void loop() {
   // Set the spinning direction counterclockwise:
   digitalWrite(dirPin, LOW);
 
+  Serial.println("5 revolutions fast, counterclockwise");
   //Spin the stepper motor 5 revolutions fast:
   for (int i = 0; i < 5 * stepsPerRevolution; i++) {
     // These four lines result in 1 step:
