@@ -70,6 +70,7 @@ def prog_cw():
     
     irq(rel(0))
 
+# Two state machines, one for ccw and one for cw
 sm_ccw = StateMachine(0, prog_ccw, freq=10000, set_base=Pin(2), out_base=Pin(2))
 sm_cw = StateMachine(1, prog_cw, freq=10000, set_base=Pin(2), out_base=Pin(2))
 
